@@ -4,7 +4,11 @@
   </div>
 
   <div class="image">
-    <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39375/preview.svg" style="height:300px">
+    <% if @cake.photo.attached? %>
+      <%= cl_image_tag @cake.photo.key, height: 300, crop: :fill %>
+    <% else %>
+      <%= cl_image_tag("cake", height: 300, crop: :fill) %>
+    <% end %>
   </div>
 
   <div class="cake-content">
