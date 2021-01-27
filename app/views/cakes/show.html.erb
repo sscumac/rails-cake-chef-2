@@ -1,0 +1,51 @@
+<div class="container-show">
+  <div class="cake-heading">
+    <%= @cake.name %>
+  </div>
+
+  <div class="image">
+    <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39375/preview.svg" style="height:300px">
+  </div>
+
+  <div class="cake-content">
+    <h6>Zutaten</h6>
+
+    <% @cake.doses.each do |dose| %>
+    <li>
+      <%= dose.ingredient.name %>
+      <%= dose.amount %>
+      <%= dose.unit %>
+      <%= link_to dose_path(dose), method: :delete, data: { confirm: "sicher, dass du #{dose.ingredient.name} löschen willst?" } do %>
+        <%# <div class="button-delete">löschen</div> %>
+        <i class="fas fa-trash"></i>
+      <% end %>
+    </li>
+    <% end %>
+
+    <%= link_to new_cake_dose_path(@cake) do %>
+      <div class="button-add">noch eine Zutat?</div>
+    <% end %>
+
+  </div>
+
+  <div class="cake-content">
+    <h6>Beschreibung</h6>
+    <%= @cake.description %>
+  </div>
+
+  <div class="cake-content">
+    <h6>Backzeit</h6>
+    <% if @cake.time %>
+      <%= "#{@cake.time} Minuten" %>
+    <% end %>
+  </div>
+
+  
+
+<%# back button %>
+
+  <%= link_to cakes_path do %>
+    <div class="button-back">zurück</div>
+  <% end %>
+
+</div>

@@ -1,0 +1,89 @@
+// Import page-specific CSS files here.
+@import "home";
+@import "components/buttons";
+@import "components/form";
+@import "cake_show";
+@import "components/footer";
+@import "cake_new";
+
+.index-container {
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 100px; //footer height
+}
+
+.card {
+  text-align: center;
+  border: white;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.card .image {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  // background-color: black;
+  // background-image: url("https://d29fhpw069ctt2.cloudfront.net/icon/image/39375/preview.svg");
+}
+
+.cards-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  }
+}
+
+

@@ -1,0 +1,20 @@
+<h6>neue Zutat</h6>
+
+<%= simple_form_for [@cake, @dose] do |f| %>
+  <%= f.association :ingredient, label: 'Zutat', input_html: { class: 'input-field' }%>
+  <%= link_to new_ingredient_path do %>
+    <p style="color: red">Fehlende Zutat ergänzen</p>
+  <% end %>
+  <%= f.input :amount, label: 'Menge', input_html: { class: 'input-field' }%>
+  <%= f.input :unit, label: 'Einheit', placeholder: "z.B. g, kg, Stück, etc..", input_html: { class: 'input-field' } %>
+  <%= f.button :submit, "Zutat hinzufügen", class: 'button-add' %>
+<% end %>
+
+
+
+<%# back button %>
+
+<%= link_to cake_path(@cake) do %>
+  <div class="button-back">zurück</div>
+<% end %>
+

@@ -1,0 +1,9 @@
+<h6>neue Zutat</h6>
+
+<%= simple_form_for [@ingredient] do |f| %>
+  <%= f.input :name, label: 'Name', input_html: { class: 'input-field' }, error: "Zutat gibt's schon" %>
+  <%= f.button :submit, "Zutat hinzufügen", class: 'button-add' %>
+<% end %>
+
+<%# back button %>
+

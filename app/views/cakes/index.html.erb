@@ -1,0 +1,26 @@
+<div class="index-container">
+
+  <h4>All deine Kuchen</h4>
+
+  <div class="cards-container">
+    <% @cakes.each do |cake| %>
+    <%= link_to cake_path(cake) do %>
+      <div class="card">
+        <div class="image">
+          <%= image_tag  "cake@3x.png", size: "100" %>
+          <%# <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39375/preview.svg" alt=""> %>
+        </div>
+        <div class="info">
+          <%= cake.name %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to new_cake_path do %> 
+    <div class="button-add">
+      neuer Kuchen
+    </div>
+  <% end %>
+</div>
