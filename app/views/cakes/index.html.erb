@@ -7,8 +7,11 @@
     <%= link_to cake_path(cake) do %>
       <div class="card">
         <div class="image">
-          <%= image_tag  "cake@3x.png", size: "100" %>
-          <%# <img src="https://d29fhpw069ctt2.cloudfront.net/icon/image/39375/preview.svg" alt=""> %>
+          <% if cake.photo.attached? %>
+            <%= cl_image_tag cake.photo.key, height: 100, crop: :fill %>
+          <% else %>
+            <%= cl_image_tag("cake", height: 100, crop: :fill) %>
+          <% end %>
         </div>
         <div class="info">
           <%= cake.name %>
