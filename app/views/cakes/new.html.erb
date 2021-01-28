@@ -4,14 +4,13 @@
   <%= f.input :name, error: 'Kuchen existiert schon.',input_html: { class: 'input-field' } %>
   <%= f.input :description, label: 'Zubereitung', input_html: { class: 'input-field' } %>
   <%= f.input :time, label: 'Backzeit in Minuten', input_html: { class: 'input-field' } %>
-  <%= f.input :photo, as: :file, 
-    label: '📷 Foto auswählen',
-    label_html: { class: 'upload-photo mb-0'} %>
-  <%= image_tag "", width: 100, class: "d-none mt-3 ", id: "photo-preview" %>
-
-  <%# <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"> %>
-  <%# <img id="blah" width="100" height="auto" /> %>
-  
+  <div class="form-section">
+    <%= f.input :photo, as: :file, 
+      label: '📷 Foto auswählen',
+      label_html: { class: 'upload-photo' },
+      input_html: { class: 'd-none', id: 'photo-input'} %>
+    <%= image_tag "", id: "photo-preview" %> 
+  </div>
   <%= f.button :submit, "Kuchen hinzufügen", class: 'button-add' %>
 <% end %>
 
