@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'Courier New', Courier, monospace;
-  height: 150px;
+  height: 180px;
 }
 
 li {
@@ -58,6 +58,7 @@ a:hover {
 
 .image {
   padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 .info {
