@@ -8,7 +8,7 @@
       <div class="card">
         <div class="image">
           <% if cake.photo.attached? %>
-            <%= cl_image_tag cake.photo.key, height: 100, crop: :fill %>
+            <%= cl_image_tag cake.photo.key %>
           <% else %>
             <%= cl_image_tag("cake", height: 100, crop: :fill) %>
           <% end %>
