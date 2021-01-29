@@ -1,21 +1,23 @@
-<h6>neuer Kuchen</h6>
+<div class="index-container">
 
-<%= simple_form_for @cake do |f| %>
-  <%= f.input :name, error: 'Kuchen existiert schon.',input_html: { class: 'input-field' } %>
-  <%= f.input :description, label: 'Zubereitung', input_html: { class: 'input-field' } %>
-  <%= f.input :time, label: 'Backzeit in Minuten', input_html: { class: 'input-field' } %>
-  <div class="form-section">
-    <%= f.input :photo, as: :file, 
-      label: '📷 Foto auswählen',
-      label_html: { class: 'upload-photo' },
-      input_html: { class: 'd-none', id: 'photo-input'} %>
-    <%= image_tag "", id: "photo-preview" %> 
-  </div>
-  <%= f.button :submit, "Kuchen hinzufügen", class: 'button-add' %>
-<% end %>
+  <h6>neuer Kuchen</h6>
 
-<%# back button %>
+  <%= simple_form_for @cake do |f| %>
+    <%= f.input :name, error: 'Kuchen existiert schon.',input_html: { class: 'input-field' } %>
+    <%= f.input :description, label: 'Zubereitung', input_html: { class: 'input-field' } %>
+    <%= f.input :time, label: 'Backzeit in Minuten', input_html: { class: 'input-field' } %>
+    <div class="form-section">
+      <%= f.input :photo, as: :file, 
+        label: '📷 Foto auswählen',
+        label_html: { class: 'upload-photo' },
+        input_html: { class: 'd-none', id: 'photo-input'} %>
+      <%= image_tag "", id: "photo-preview" %> 
+    </div>
+    <%= f.button :submit, "Kuchen hinzufügen", class: 'button-add' %>
+  <% end %>
 
-<%= link_to "/" do %>
-  <div class="button-back">zurück</div>
-<% end %> 
+  <%# back button %>
+  <%= link_to "zurück", :back, class:"button-back" %> 
+</div>
+
+
