@@ -6,10 +6,16 @@
     <% @cakes.each do |cake| %>
     <%= link_to cake_path(cake) do %>
       <div class="card">
-        <%= cl_image_tag("cake") %>
+        <div class="image-space">
+          <% if cake.photo.attached? %>
+            <%= cl_image_tag cake.photo.key %>
+          <% else %>
+            <%= cl_image_tag("cake") %>
+            <% end %>
+          </div>
         <div class="info">
-          <p> <%= cake.name %> </p>
-          <p class="small-p"> <%= cake.time %> Minuten</p>
+            <p> <%= cake.name %> </p>
+            <p class="small-p"> <%= cake.time %> Minuten</p>
         </div>
       </div>
       <% end %>
