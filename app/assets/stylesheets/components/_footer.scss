@@ -5,11 +5,16 @@
 }
 
 .footer {
+  opacity: 0.2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100px;
   position: relative;
   text-align: center;
   padding-top: 50px;
   width: 93%;
+}
+
+.footer:hover {
+  opacity: 0.8;
 }
 
