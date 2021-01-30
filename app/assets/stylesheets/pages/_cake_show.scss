@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .container-show img {
@@ -19,11 +20,16 @@
 
 .cake-content {
   margin-bottom: 25px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .cake-content i {
   color:#F7B1C2;
   font-size: 14pt;
+}
+
+.headline {
+  font-weight: bolder;
 }
 
 // Smallest device

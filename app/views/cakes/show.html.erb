@@ -7,12 +7,12 @@
     <% if @cake.photo.attached? %>
       <%= cl_image_tag @cake.photo.key, crop: :fill %>
     <% else %>
-      <%= cl_image_tag("cake", height: 300, crop: :fill) %>
+      <%= cl_image_tag("cake", crop: :fill) %>
     <% end %>
   </div>
 
   <div class="cake-content">
-    <h6>Zutaten</h6>
+    <p class="headline">Zutaten</p>
 
     <% @cake.doses.each do |dose| %>
     <li>
@@ -33,12 +33,12 @@
   </div>
 
   <div class="cake-content">
-    <h6>Beschreibung</h6>
+    <p class="headline">Beschreibung</p>
     <%= @cake.description %>
   </div>
 
   <div class="cake-content">
-    <h6>Backzeit</h6>
+    <p class="headline">Zubereitungszeit</p>
     <% if @cake.time %>
       <%= "#{@cake.time} Minuten" %>
     <% end %>

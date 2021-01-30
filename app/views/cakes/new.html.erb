@@ -5,7 +5,7 @@
   <%= simple_form_for @cake do |f| %>
     <%= f.input :name, error: 'Kuchen existiert schon.',input_html: { class: 'input-field' } %>
     <%= f.input :description, label: 'Zubereitung', input_html: { :rows => 10, class: 'input-field' } %>
-    <%= f.input :time, label: 'Backzeit in Minuten', input_html: { class: 'input-field' } %>
+    <%= f.input :time, label: 'Zubereitungszeit in Minuten', input_html: { class: 'input-field' } %>
     <div class="form-section">
       <%= f.input :photo, as: :file, 
         label: '📷 Foto auswählen',

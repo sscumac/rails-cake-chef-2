@@ -6,19 +6,74 @@
 @import "components/footer";
 @import "cake_new";
 
+
+
+
+.preload {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 .index-container {
   margin-top: 50px;
   text-align: left;
   padding-bottom: 100px; //footer height
 }
 
-.card {
+.cards-container {
   text-align: center;
-  border: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+}
+
+.card {
+  width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s;
+  text-align: center;
+  font-size: 100%;
+  border: none;
+}
+
+.card:hover {
+  width: 110%;
+  font-size: 110%;
+  transform: translate(-5%,-5%);
+  margin-bottom: -10%;
+}
+
+.card img {
+  padding: 5%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  font-family: 'Courier New', Courier, monospace;
-  height: 180px;
+  justify-content: space-between;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.info p {
+  margin-top: 0;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.small-p {
+  font-size: smaller;
+  color:rgb(115, 170, 184);
+  padding-top: 2px;
 }
 
 li {
@@ -34,38 +89,7 @@ a:hover {
     color: black;
 }
 
-.card .image {
-  height: 75%;
-}
-.card .image img {
-  object-fit: cover;
-  height: 100%;
-  transition: height 1s;
-}
 
-.card .image img:hover {
-  height: 115%;
-}
-
-
-
-.cards-container {
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 25px;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.image {
-  padding-bottom: 10px;
-  padding-top: 20px;
-}
-
-.info {
-  padding-top: 5px;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
