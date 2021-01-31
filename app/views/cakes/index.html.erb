@@ -1,6 +1,6 @@
 <div class="index-container">
 
-  <h4>All deine Kuchen</h4>
+  <h6>Kuchensammlung</h6>
 
   <div class="cards-container">
     <% @cakes.each do |cake| %>
@@ -22,7 +22,11 @@
     <% end %>
   </div>
 
-  <%= link_to "+", new_cake_path, class:"button-add", style:"font-weight: bolder; font-size: x-large" %>
-  
+  <%# <%= link_to "+", new_cake_path, class:"button-plus" %>
+  <div class="wrapper-plus">
+    <%= link_to new_cake_path do %>
+      <p class="button-plus">+</p>
+    <% end %>
+  </div>
 </div>
    
