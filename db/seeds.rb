@@ -7,4 +7,30 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Ingredient.create(name: "Testzutat")
+puts "Destroying database"
+Cake.destroy_all
+Ingredient.destroy_all
+
+puts "Database cleaned"
+
+puts "Adding Ingredients"
+
+Zucker = Ingredient.create(name: "Zucker")
+Zucker = Ingredient.create(name: "Mascarpone")
+Zucker = Ingredient.create(name: "Schlagsahne")
+Zucker = Ingredient.create(name: "Magerquark")
+Zucker = Ingredient.create(name: "Vanillin")
+Zucker = Ingredient.create(name: "Mehl")
+Zucker = Ingredient.create(name: "Vanillepulver")
+Zucker = Ingredient.create(name: "Vanillezucker")
+Zucker = Ingredient.create(name: "Zimt")
+Zucker = Ingredient.create(name: "Butter")
+Zucker = Ingredient.create(name: "Salz")
+Zucker = Ingredient.create(name: "Ei")
+Zucker = Ingredient.create(name: "Kakaopulver")
+Zucker = Ingredient.create(name: "Zitronensaft")
+Zucker = Ingredient.create(name: "Kaffee")
+Zucker = Ingredient.create(name: "Puderzucker")
+Zucker = Ingredient.create(name: "Haselnuss gerieben")
+Zucker = Ingredient.create(name: "Mandel gerieben")
+
