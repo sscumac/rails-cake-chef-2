@@ -44,6 +44,9 @@
     <% end %>
   </div>
 
+
+  <%= link_to "Kuchen löschen", cake_path(@cake), class:"button-delete", method: :delete, data: { confirm: "sicher, dass du #{@cake.name} löschen willst?" } %>
+
   
 
 <%# back button %>

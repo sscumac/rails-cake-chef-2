@@ -10,12 +10,16 @@
 
 .button-plus {
   background-color: white;
+  color: rgba(0, 0, 0, 0.664);
   border-radius: 5px;
   font-weight: bolder; 
   font-size: 30pt;
   width: 100%;
-  opacity: 0.7;
   text-align: center;
+}
+
+.button-plus:hover {
+  color: rgba(0, 0, 0, 0.664)
 }
 
 .wrapper-plus {

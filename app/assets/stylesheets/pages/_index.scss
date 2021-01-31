@@ -41,6 +41,7 @@
   text-align: center;
   font-size: 100%;
   border: none;
+  border-radius: 5px;
 }
 
 .image-space {
@@ -93,7 +94,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.664);
 }
 
 

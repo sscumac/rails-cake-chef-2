@@ -20,6 +20,13 @@ class CakesController < ApplicationController
     end
   end
 
+  def destroy
+    @cake = Cake.find(params[:id])
+    @cake.delete
+
+    redirect_to root_path, notice: "#{@cake.name} gelöscht"
+  end
+
   private
 
   def cake_params
